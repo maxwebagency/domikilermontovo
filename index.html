@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Домики 250 метров от моря в Лермонтово | Коттеджи с бассейном</title>
+    <meta name="description" content="Снять коттедж у моря в Лермонтово. Двухэтажные дома и этажи под ключ, подогреваемый бассейн, 250 м до пляжа. Бронирование по телефону 89184021249." />
+    <meta name="keywords" content="коттеджи Лермонтово, домики у моря, снять коттедж Краснодарский край, гостевой дом Лермонтово, бассейн" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Домики 250 метров от моря в Лермонтово | Коттеджи с бассейном" />
+    <meta property="og:description" content="Круглогодичные коттеджи с подогреваемым бассейном. 250 метров до пляжа. Бронируйте сейчас!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <style>
+        :root {
+            --teal: #00A8A8;
+            --teal-dark: #008b8b;
+            --sand: #F5E6D3;
+            --sand-light: #faf5ef;
+            --white: #ffffff;
+            --dark: #1a1a2e;
+            --text: #2d2d3f;
+            --text-light: #5a5a70;
+            --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.10);
+            --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.14);
+            --radius-sm: 12px;
+            --radius: 18px;
+            --radius-lg: 24px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --header-height: 72px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-top: var(--header-height);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body.modal-open {
+            overflow: hidden;
+            padding-right: var(--scrollbar-width, 0px);
+        }
+
+        /* ========== HEADER ========== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            height: var(--header-height);
+            display: flex;
+            align-items: center;
+            transition: box-shadow var(--transition);
+        }
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+        .header__inner {
+            width: 100%;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .header__logo {
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--teal);
+            text-decoration: none;
+            white-space: nowrap;
+            letter-spacing: -0.3px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+        .header__logo i {
+            font-size: 1.5rem;
+            color: var(--teal);
+        }
+        .header__contacts {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+        .header__phone {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--dark);
+            text-decoration: none;
+            white-space: nowrap;
+            transition: color var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .header__phone:hover {
+            color: var(--teal);
+        }
+        .header__phone i {
+            color: var(--teal);
+            font-size: 0.95rem;
+        }
+        .icon-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all var(--transition);
+            text-decoration: none;
+            flex-shrink: 0;
+            position: relative;
+        }
+        .icon-btn--whatsapp {
+            background: #25D366;
+            color: #fff;
+        }
+        .icon-btn--whatsapp:hover {
+            background: #1fb855;
+            transform: scale(1.08);
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+        }
+        .icon-btn--max {
+            background: #6c5ce7;
+            color: #fff;
+        }
+        .icon-btn--max:hover {
+            background: #5a4bd1;
+            transform: scale(1.08);
+            box-shadow: 0 4px 16px rgba(108, 92, 231, 0.35);
+        }
+        .icon-btn--call {
+            background: var(--teal);
+            color: #fff;
+        }
+        .icon-btn--call:hover {
+            background: var(--teal-dark);
+            transform: scale(1.08);
+            box-shadow: 0 4px 16px rgba(0, 168, 168, 0.35);
+        }
+        .icon-btn__label {
+            display: none;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 8px;
+            z-index: 1001;
+            flex-shrink: 0;
+        }
+        .hamburger span {
+            display: block;
+            width: 26px;
+            height: 2.5px;
+            background: var(--dark);
+            border-radius: 3px;
+            transition: all var(--transition);
+            transform-origin: center;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(7.5px) rotate(45deg);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-7.5px) rotate(-45deg);
+        }
+
+        /* Mobile dropdown */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 20px 24px;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 999;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-110%);
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .mobile-menu.open {
+            transform: translateY(0);
+        }
+        .mobile-menu a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--dark);
+            text-decoration: none;
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            transition: background var(--transition);
+        }
+        .mobile-menu a:hover {
+            background: var(--sand-light);
+        }
+        .mobile-menu a i {
+            width: 24px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        .mobile-menu a.whatsapp-link i {
+            color: #25D366;
+        }
+        .mobile-menu a.max-link i {
+            color: #6c5ce7;
+        }
+        .mobile-menu a.call-link i {
+            color: var(--teal);
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            position: relative;
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('1.jpg') center/cover no-repeat;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+        .hero__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.55) 100%);
+            z-index: 1;
+        }
+        .hero__content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #fff;
+            padding: 40px 24px;
+            max-width: 750px;
+            animation: fadeInUp 0.9s ease-out;
+        }
+        .hero__title {
+            font-size: clamp(2rem, 5vw, 3.4rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+        }
+        .hero__subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.35rem);
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 36px;
+            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+            line-height: 1.5;
+        }
+        .hero__btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            justify-content: center;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all var(--transition);
+            border: none;
+            white-space: nowrap;
+            letter-spacing: 0.2px;
+        }
+        .btn--primary {
+            background: var(--teal);
+            color: #fff;
+            box-shadow: 0 6px 24px rgba(0, 168, 168, 0.35);
+        }
+        .btn--primary:hover {
+            background: var(--teal-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 32px rgba(0, 168, 168, 0.45);
+        }
+        .btn--whatsapp {
+            background: #25D366;
+            color: #fff;
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.35);
+        }
+        .btn--whatsapp:hover {
+            background: #1fb855;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 32px rgba(37, 211, 102, 0.45);
+        }
+        .btn--outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+        }
+        .btn--outline:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: #fff;
+            transform: translateY(-2px);
+        }
+        .btn--small {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-radius: 40px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ========== SECTIONS ========== */
+        .section {
+            padding: 80px 24px;
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+        .section__title {
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+        .section__subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 48px;
+            font-size: 1.05rem;
+        }
+
+        /* ========== ADVANTAGES ========== */
+        .advantages {
+            background: var(--sand-light);
+            padding: 70px 24px;
+        }
+        .advantages__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+        .advantage-card {
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 32px 20px 24px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition);
+        }
+        .advantage-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+        }
+        .advantage-card__icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--sand);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 1.5rem;
+            color: var(--teal);
+            transition: all var(--transition);
+        }
+        .advantage-card:hover .advantage-card__icon {
+            background: var(--teal);
+            color: #fff;
+            transform: scale(1.08);
+        }
+        .advantage-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 6px;
+        }
+        .advantage-card p {
+            font-size: 0.88rem;
+            color: var(--text-light);
+            line-height: 1.4;
+        }
+
+        /* ========== COTTAGES ========== */
+        .cottages__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .cottage-card {
+            background: #fff;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+        .cottage-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+        .cottage-card__img {
+            width: 100%;
+            height: 260px;
+            object-fit: contain; /* Изменено с cover на contain */
+            object-position: center;
+            display: block;
+            transition: transform 0.5s ease;
+            background-color: #fff; /* Поля будут белыми, как сама карточка */
+        }
+        .cottage-card:hover .cottage-card__img {
+            transform: scale(1.04);
+        }
+        .cottage-card__body {
+            padding: 20px 22px 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .cottage-card__title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 6px;
+        }
+        .cottage-card__desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 16px;
+            flex: 1;
+            line-height: 1.5;
+        }
+        .cottage-card__btn {
+            align-self: flex-start;
+        }
+
+        /* ========== GALLERY CAROUSEL ========== */
+        .gallery-section {
+            background: var(--sand-light);
+            padding: 70px 0;
+        }
+        .carousel {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            background-color: var(--sand-light); /* Фон карусели, чтобы поля сливались */
+        }
+        .carousel__track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: transform;
+        }
+        .carousel__slide {
+            min-width: 100%;
+            height: 450px;
+            object-fit: contain; /* Изменено с cover на contain */
+            object-position: center;
+            display: block;
+            background-color: var(--sand-light); /* Поля в цвет фона секции */
+        }
+        .carousel__btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.85);
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--dark);
+            z-index: 5;
+            transition: all var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+        }
+        .carousel__btn:hover {
+            background: #fff;
+            box-shadow: var(--shadow-md);
+            transform: translateY(-50%) scale(1.08);
+        }
+        .carousel__btn--prev {
+            left: 16px;
+        }
+        .carousel__btn--next {
+            right: 16px;
+        }
+        .carousel__dots {
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 5;
+        }
+        .carousel__dot {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.55);
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition);
+            padding: 0;
+        }
+        .carousel__dot.active {
+            background: #fff;
+            transform: scale(1.3);
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+        }
+
+        /* ========== CONTACTS ========== */
+        .contacts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .contacts__info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contacts__item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+        .contacts__item i {
+            font-size: 1.4rem;
+            color: var(--teal);
+            margin-top: 2px;
+            width: 28px;
+            text-align: center;
+        }
+        .contacts__item strong {
+            display: block;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 2px;
+        }
+        .contacts__item span,
+        .contacts__item a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+        .contacts__item a:hover {
+            color: var(--teal);
+        }
+        .contacts__btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 8px;
+        }
+        .contacts__map {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            min-height: 400px;
+            border: none;
+            width: 100%;
+            position: relative;
+        }
+        .contacts__map #map {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            border: none;
+            display: block;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--dark);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 32px 24px;
+            text-align: center;
+        }
+        .footer__inner {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+        .footer a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+        .footer a:hover {
+            color: #fff;
+        }
+        .footer__btns {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .footer .icon-btn {
+            width: 38px;
+            height: 38px;
+            font-size: 1rem;
+        }
+
+        /* ========== MODAL ========== */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal {
+            background: #fff;
+            border-radius: var(--radius-lg);
+            max-width: 680px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(30px);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .modal-overlay.active .modal {
+            transform: translateY(0);
+        }
+        .modal__close {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1.4rem;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+            line-height: 1;
+        }
+        .modal__close:hover {
+            background: rgba(0, 0, 0, 0.75);
+            transform: scale(1.08);
+        }
+        .modal__gallery {
+            position: relative;
+            width: 100%;
+            height: 380px;
+            overflow: hidden;
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+            background: #e8e8e8; /* Фон для полей */
+        }
+        .modal__gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Изменено с cover на contain */
+            object-position: center;
+            display: block;
+            transition: opacity 0.35s ease;
+            background-color: #e8e8e8; /* Такой же фон, как у контейнера */
+        }
+        .modal__gallery-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--dark);
+            z-index: 5;
+            transition: all var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal__gallery-nav:hover {
+            background: #fff;
+            transform: translateY(-50%) scale(1.1);
+        }
+        .modal__gallery-nav--prev {
+            left: 12px;
+        }
+        .modal__gallery-nav--next {
+            right: 12px;
+        }
+        .modal__gallery-dots {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 6px;
+            z-index: 5;
+        }
+        .modal__gallery-dots span {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+        .modal__gallery-dots span.active {
+            background: #fff;
+            transform: scale(1.35);
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+        }
+        .modal__body {
+            padding: 24px 26px 28px;
+        }
+        .modal__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+        .modal__desc {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            white-space: pre-line;
+        }
+        .modal__btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        /* Scrollbar for modal */
+        .modal::-webkit-scrollbar {
+            width: 5px;
+        }
+        .modal::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .modal::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 10px;
+        }
+
+        /* ========== ANIMATE ON SCROLL ========== */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .advantages__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .cottages__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .contacts {
+                grid-template-columns: 1fr;
+            }
+            .carousel__slide {
+                height: 340px;
+            }
+            .hero {
+                background-attachment: scroll;
+            }
+        }
+        @media (max-width: 768px) {
+            .header__contacts .icon-btn {
+                display: none;
+            }
+            .header__phone span {
+                display: none;
+            }
+            .header__phone i {
+                font-size: 1.3rem;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .mobile-menu {
+                display: flex;
+            }
+            .advantages__grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+            .cottages__grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            .section {
+                padding: 50px 16px;
+            }
+            .advantages {
+                padding: 50px 16px;
+            }
+            .gallery-section {
+                padding: 50px 0;
+            }
+            .carousel__slide {
+                height: 260px;
+            }
+            .modal__gallery {
+                height: 260px;
+            }
+            .hero__btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero__btns .btn {
+                width: 100%;
+                justify-content: center;
+                max-width: 320px;
+            }
+            .contacts__btns {
+                flex-direction: column;
+            }
+            .contacts__btns .btn {
+                justify-content: center;
+                width: 100%;
+            }
+            .footer__inner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        @media (max-width: 480px) {
+            .advantages__grid {
+                grid-template-columns: 1fr;
+            }
+            .header__logo {
+                font-size: 0.95rem;
+            }
+            .carousel__slide {
+                height: 210px;
+            }
+            .modal__gallery {
+                height: 210px;
+            }
+            .carousel__btn {
+                width: 36px;
+                height: 36px;
+                font-size: 0.9rem;
+            }
+            .btn {
+                padding: 12px 22px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Hotel",
+            "name": "Домики 250 метров от моря",
+            "description": "Круглогодичные коттеджи с подогреваемым бассейном в посёлке Лермонтово, 250 метров до пляжа.",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "ул. Ленина, 33а",
+                "addressLocality": "Лермонтово",
+                "addressRegion": "Краснодарский край",
+                "addressCountry": "RU"
+            },
+            "telephone": "+79184021249",
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 44.301118,
+                "longitude": 38.754848
+            },
+            "amenityFeature": [
+                { "@type": "LocationFeatureSpecification", "name": "Подогреваемый бассейн" },
+                { "@type": "LocationFeatureSpecification", "name": "Бесплатная парковка" },
+                { "@type": "LocationFeatureSpecification", "name": "Террасы" },
+                { "@type": "LocationFeatureSpecification", "name": "Баня" }
+            ],
+            "url": "https://domiki-lermontovo.ru",
+            "sameAs": [
+                "https://yandex.ru/maps/org/domiki/109366134346/reviews/"
+            ]
+        }
+    </script>
+</head>
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <a href="#" class="header__logo" aria-label="На главную">
+                <i class="fa-solid fa-house-chimney"></i> Домики у моря
+            </a>
+            <div class="header__contacts">
+                <a href="tel:+79184021249" class="header__phone" aria-label="Позвонить">
+                    <i class="fa-solid fa-phone"></i> <span>8 918 402-12-49</span>
+                </a>
+                <!-- WhatsApp -->
+                <a href="https://wa.me/79184021249?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%82%20%D0%BA%D0%BE%D1%82%D1%82%D0%B5%D0%B4%D0%B6%D0%B8%20%D0%B2%20%D0%9B%D0%B5%D1%80%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2%D0%BE."
+                target="_blank" rel="noopener" class="icon-btn icon-btn--whatsapp" aria-label="WhatsApp" title="Написать в WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <!-- Max Messenger -->
+                <a href="https://max.ru/u/f9LHodD0cOJKe0XVjeGMJPEZUjxC2jw2jee1zy8UYYXzUa7tY6pPUDA-Sak" target="_blank" rel="noopener" class="icon-btn icon-btn--max" aria-label="Max Messenger" title="Написать в Max">
+                    <i class="fa-solid fa-comment-dots"></i>
+                </a>
+                <a href="tel:+79184021249" class="icon-btn icon-btn--call" aria-label="Позвонить" title="Позвонить">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+                <!-- Hamburger (mobile) -->
+                <button class="hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile dropdown menu -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Мобильное меню">
+        <a href="https://wa.me/79184021249?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%82%20%D0%BA%D0%BE%D1%82%D1%82%D0%B5%D0%B4%D0%B6%D0%B8%20%D0%B2%20%D0%9B%D0%B5%D1%80%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2%D0%BE."
+        target="_blank" rel="noopener" class="whatsapp-link">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://max.ru/u/f9LHodD0cOJKe0XVjeGMJPEZUjxC2jw2jee1zy8UYYXzUa7tY6pPUDA-Sak" target="_blank" rel="noopener" class="max-link">
+            <i class="fa-solid fa-comment-dots"></i> Max Messenger
+        </a>
+        <a href="tel:+79184021249" class="call-link">
+            <i class="fa-solid fa-phone"></i> Позвонить
+        </a>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="hero">
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <h1 class="hero__title">Домики 250 метров от моря</h1>
+            <p class="hero__subtitle">Круглогодичные коттеджи с подогреваемым бассейном в Лермонтово</p>
+            <div class="hero__btns">
+                <a href="#cottages" class="btn btn--primary">
+                    <i class="fa-solid fa-chevron-down"></i> Смотреть коттеджи
+                </a>
+                <a href="https://wa.me/79184021249?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%82%20%D0%BA%D0%BE%D1%82%D1%82%D0%B5%D0%B4%D0%B6%D0%B8%20%D0%B2%20%D0%9B%D0%B5%D1%80%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2%D0%BE."
+                target="_blank" rel="noopener" class="btn btn--whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Написать в WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ADVANTAGES ==================== -->
+    <section class="advantages" id="advantages">
+        <h2 class="section__title">Почему выбирают нас</h2>
+        <p class="section__subtitle">Комфортный отдых у моря в любое время года</p>
+        <div class="advantages__grid">
+            <div class="advantage-card animate-on-scroll">
+                <div class="advantage-card__icon"><i class="fa-solid fa-water"></i></div>
+                <h3>250 м до моря</h3>
+                <p>Всего 3 минуты пешком до чистого пляжа</p>
+            </div>
+            <div class="advantage-card animate-on-scroll">
+                <div class="advantage-card__icon"><i class="fa-solid fa-temperature-high"></i></div>
+                <h3>Подогреваемый бассейн</h3>
+                <p>Комфортное купание с апреля по октябрь</p>
+            </div>
+            <div class="advantage-card animate-on-scroll">
+                <div class="advantage-card__icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+                <h3>Большие террасы</h3>
+                <p>Личное пространство для отдыха на свежем воздухе</p>
+            </div>
+            <div class="advantage-card animate-on-scroll">
+                <div class="advantage-card__icon"><i class="fa-solid fa-snowflake"></i></div>
+                <h3>Круглый год</h3>
+                <p>Отопление и всё необходимое для зимнего проживания</p>
+            </div>
+            <div class="advantage-card animate-on-scroll">
+                <div class="advantage-card__icon"><i class="fa-solid fa-square-parking"></i></div>
+                <h3>Парковка</h3>
+                <p>Бесплатная охраняемая парковка на территории</p>
+            </div>
+            <div class="advantage-card animate-on-scroll">
+                <div class="advantage-card__icon"><i class="fa-solid fa-leaf"></i></div>
+                <h3>Тихий район</h3>
+                <p>Спокойная зона вдали от шумных трасс</p>
+            </div>
+            <div class="advantage-card animate-on-scroll">
+                <div class="advantage-card__icon"><i class="fa-solid fa-hot-tub-person"></i></div>
+                <h3>Баня</h3>
+                <p>Настоящая русская баня для полного расслабления</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== COTTAGES ==================== -->
+    <section class="section" id="cottages">
+        <h2 class="section__title">Наши коттеджи</h2>
+        <p class="section__subtitle">Выберите идеальный вариант для вашей семьи или компании</p>
+        <div class="cottages__grid">
+            <!-- Card 1: Двухэтажный коттедж на 8 спальных мест -->
+            <article class="cottage-card animate-on-scroll" data-cottage="1" aria-label="Двухэтажный коттедж на 8 спальных мест">
+                <img class="cottage-card__img" src="2.jpg" alt="Двухэтажный коттедж на 8 спальных мест" loading="lazy" />
+                <div class="cottage-card__body">
+                    <h3 class="cottage-card__title">Двухэтажный коттедж на 8 спальных мест</h3>
+                    <p class="cottage-card__desc">6 мест + 2 доп. · 110 м² · 2 спальни · кухня-гостиная · 2 санузла · терраса · кондиционер</p>
+                    <button class="btn btn--primary btn--small cottage-card__btn">Подробнее</button>
+                </div>
+            </article>
+            <!-- Card 2: Этаж под ключ на 7 спальных мест -->
+            <article class="cottage-card animate-on-scroll" data-cottage="2" aria-label="Этаж под ключ на 7 спальных мест">
+                <img class="cottage-card__img" src="8.jpg" alt="Этаж под ключ на 7 спальных мест" loading="lazy" />
+                <div class="cottage-card__body">
+                    <h3 class="cottage-card__title">Этаж под ключ на 7 спальных мест</h3>
+                    <p class="cottage-card__desc">5 мест + 2 доп. · 60 м² · 2 спальни · кухня-гостиная · душ/туалет · терраса с качелей</p>
+                    <button class="btn btn--primary btn--small cottage-card__btn">Подробнее</button>
+                </div>
+            </article>
+            <!-- Card 3: Дом на 6 спальных мест -->
+            <article class="cottage-card animate-on-scroll" data-cottage="3" aria-label="Дом на 6 спальных мест">
+                <img class="cottage-card__img" src="13.jpg" alt="Дом на 6 спальных мест" loading="lazy" />
+                <div class="cottage-card__body">
+                    <h3 class="cottage-card__title">Дом на 6 спальных мест</h3>
+                    <p class="cottage-card__desc">4 места + 2 доп. · 60 м² · 2 спальни · кухня-гостиная · душ/туалет · терраса с качелей</p>
+                    <button class="btn btn--primary btn--small cottage-card__btn">Подробнее</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ==================== GALLERY ==================== -->
+    <section class="gallery-section" id="gallery">
+        <h2 class="section__title">Территория и бассейн</h2>
+        <p class="section__subtitle">Посмотрите, как у нас красиво</p>
+        <div class="carousel" id="mainCarousel" aria-label="Галерея территории">
+            <div class="carousel__track" id="carouselTrack">
+                <img class="carousel__slide" src="20.jpg" alt="Подогреваемый бассейн" loading="lazy" />
+                <img class="carousel__slide" src="21.jpg" alt="Зона отдыха у бассейна" loading="lazy" />
+                <img class="carousel__slide" src="22.jpg" alt="Терраса для отдыха" loading="lazy" />
+                <img class="carousel__slide" src="23.jpg" alt="Благоустроенная территория" loading="lazy" />
+                <img class="carousel__slide" src="24.jpg" alt="Общий вид территории" loading="lazy" />
+            </div>
+            <button class="carousel__btn carousel__btn--prev" id="carouselPrev" aria-label="Предыдущий слайд"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="carousel__btn carousel__btn--next" id="carouselNext" aria-label="Следующий слайд"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="carousel__dots" id="carouselDots"></div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACTS ==================== -->
+    <section class="section" id="contacts">
+        <h2 class="section__title">Контакты</h2>
+        <p class="section__subtitle">Свяжитесь с нами удобным способом</p>
+        <div class="contacts">
+            <div class="contacts__info animate-on-scroll">
+                <div class="contacts__item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div><strong>Адрес</strong><span>с. Лермонтово, ул. Ленина, 33а<br />Краснодарский край</span></div>
+                </div>
+                <div class="contacts__item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div><strong>Телефон</strong><a href="tel:+79184021249">8 918 402-12-49 (Рузанна)</a></div>
+                </div>
+                <div class="contacts__item">
+                    <i class="fa-solid fa-clock"></i>
+                    <div><strong>Заезд / Выезд</strong><span>Заезд с 14:00, выезд до 12:00</span></div>
+                </div>
+                <div class="contacts__btns">
+                    <a href="https://wa.me/79184021249?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%82%20%D0%BA%D0%BE%D1%82%D1%82%D0%B5%D0%B4%D0%B6%D0%B8%20%D0%B2%20%D0%9B%D0%B5%D1%80%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2%D0%BE."
+                    target="_blank" rel="noopener" class="btn btn--whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i> Написать в WhatsApp
+                    </a>
+                    <a href="https://max.ru/u/f9LHodD0cOJKe0XVjeGMJPEZUjxC2jw2jee1zy8UYYXzUa7tY6pPUDA-Sak" target="_blank" rel="noopener" class="btn btn--outline" style="background:#6c5ce7;border-color:#6c5ce7;color:#fff;">
+                        <i class="fa-solid fa-comment-dots"></i> Написать в Max
+                    </a>
+                    <a href="https://yandex.ru/maps/org/domiki/109366134346/reviews/" target="_blank" rel="noopener" class="btn btn--outline" style="border-color:var(--teal);color:var(--teal);">
+                        <i class="fa-solid fa-star"></i> Отзывы на Яндексе
+                    </a>
+                </div>
+            </div>
+            <div class="contacts__map animate-on-scroll">
+                <div id="map" style="width:100%;height:100%;min-height:400px;border:none;border-radius:18px;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div>
+                <p>© 2026 Домики 250 метров от моря. Лермонтово.</p>
+                <p><a href="#" onclick="alert('Политика конфиденциальности (заглушка)');return false;">Политика конфиденциальности</a></p>
+            </div>
+            <div class="footer__btns">
+                <a href="https://wa.me/79184021249?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!" target="_blank" rel="noopener" class="icon-btn icon-btn--whatsapp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://max.ru/u/f9LHodD0cOJKe0XVjeGMJPEZUjxC2jw2jee1zy8UYYXzUa7tY6pPUDA-Sak" target="_blank" rel="noopener" class="icon-btn icon-btn--max" aria-label="Max"><i class="fa-solid fa-comment-dots"></i></a>
+                <a href="tel:+79184021249" class="icon-btn icon-btn--call" aria-label="Позвонить"><i class="fa-solid fa-phone"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== MODAL OVERLAY ==================== -->
+    <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+        <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Информация о коттедже">
+            <button class="modal__close" id="modalClose" aria-label="Закрыть">&times;</button>
+            <div class="modal__gallery" id="modalGallery">
+                <img id="modalMainImage" src="" alt="" />
+                <button class="modal__gallery-nav modal__gallery-nav--prev" id="modalPrev" aria-label="Предыдущее фото"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="modal__gallery-nav modal__gallery-nav--next" id="modalNext" aria-label="Следующее фото"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="modal__gallery-dots" id="modalDots"></div>
+            </div>
+            <div class="modal__body">
+                <h3 class="modal__title" id="modalTitle"></h3>
+                <p class="modal__desc" id="modalDesc"></p>
+                <div class="modal__btns">
+                    <a href="#" id="modalWhatsapp" target="_blank" rel="noopener" class="btn btn--whatsapp btn--small">
+                        <i class="fa-brands fa-whatsapp"></i> Написать в WhatsApp
+                    </a>
+                    <a href="#" id="modalMax" target="_blank" rel="noopener" class="btn btn--small" style="background:#6c5ce7;color:#fff;">
+                        <i class="fa-solid fa-comment-dots"></i> Написать в Max
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            // ============ DOM elements ============
+            const header = document.getElementById('header');
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const modalOverlay = document.getElementById('modalOverlay');
+            const modal = document.getElementById('modal');
+            const modalClose = document.getElementById('modalClose');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDesc = document.getElementById('modalDesc');
+            const modalMainImage = document.getElementById('modalMainImage');
+            const modalGallery = document.getElementById('modalGallery');
+            const modalDots = document.getElementById('modalDots');
+            const modalPrev = document.getElementById('modalPrev');
+            const modalNext = document.getElementById('modalNext');
+            const modalWhatsapp = document.getElementById('modalWhatsapp');
+            const modalMax = document.getElementById('modalMax');
+            const carouselTrack = document.getElementById('carouselTrack');
+            const carouselDots = document.getElementById('carouselDots');
+            const carouselPrev = document.getElementById('carouselPrev');
+            const carouselNext = document.getElementById('carouselNext');
+
+            // ============ Cottage data ============
+            const cottageData = {
+                1: {
+                    title: 'Двухэтажный коттедж на 8 спальных мест',
+                    desc: 'Двухэтажный коттедж на 8 спальных мест, 250 метров от моря.\n\n' +
+                        '1 этаж: изолированная спальня с двуспальной кроватью, в кухне-гостиной диван раскладывается на 2, туалет, душ.\n\n' +
+                        '2 этаж: общая комната с двуспальной кроватью и диваном, раскладывающимся на 2, туалет, душ.\n\n' +
+                        'Собственная терраса со столиком и стульями на 1 этаже, на 2 этаже — кресло-кокон.\n\n' +
+                        'Площадь 110 м², кондиционер, телевизор, холодильник.',
+                    images: [
+                        '2.jpg',
+                        '3.jpg',
+                        '4.jpg',
+                        '5.jpg',
+                        '6.jpg',
+                        '7.jpg'
+                    ]
+                },
+                2: {
+                    title: 'Этаж под ключ на 7 спальных мест',
+                    desc: 'Этаж под ключ на 7 спальных мест, 250 метров от моря.\n\n' +
+                        '2 изолированные спальни: 1-я — двуспальная кровать, 2-я — двуспальная и односпальная кровать.\n\n' +
+                        'В кухне-гостиной диван раскладывается на 2. Туалет, душ.\n\n' +
+                        'Собственная терраса со столиком и стульями, подвесная качеля.\n\n' +
+                        'Площадь 60 м², кондиционер, телевизор, холодильник.',
+                    images: [
+                        '8.jpg',
+                        '9.jpg',
+                        '10.jpg',
+                        '11.jpg',
+                        '12.jpg'
+                    ]
+                },
+                3: {
+                    title: 'Дом на 6 спальных мест',
+                    desc: 'Дом на 6 спальных мест (4 места + 2 доп.), 250 метров от моря.\n\n' +
+                        '2 изолированные спальни с двуспальными кроватями.\n\n' +
+                        'В кухне-гостиной раскладной диван на 2 места. Туалет, душ.\n\n' +
+                        'Собственная терраса со столиком и стульями, подвесная качеля.\n\n' +
+                        'Площадь 60 м², кондиционер, телевизор, холодильник.',
+                    images: [
+                        '13.jpg',
+                        '14.jpg',
+                        '15.jpg',
+                        '16.jpg',
+                        '17.jpg',
+                        '18.jpg'
+                    ]
+                }
+            };
+
+            let currentCottageId = null;
+            let currentImageIndex = 0;
+            let carouselIndex = 0;
+            const totalCarouselSlides = 5; // изменено с 6 на 5
+            let carouselInterval;
+
+            // ============ Header scroll effect ============
+            function updateHeaderShadow() {
+                if (window.scrollY > 20) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+            window.addEventListener('scroll', updateHeaderShadow, { passive: true });
+            updateHeaderShadow();
+
+            // ============ Mobile menu ============
+            function closeMobileMenu() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+
+            function openMobileMenu() {
+                hamburger.classList.add('active');
+                mobileMenu.classList.add('open');
+                hamburger.setAttribute('aria-expanded', 'true');
+            }
+
+            hamburger.addEventListener('click', function() {
+                if (hamburger.classList.contains('active')) {
+                    closeMobileMenu();
+                } else {
+                    openMobileMenu();
+                }
+            });
+
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+
+            document.addEventListener('click', function(e) {
+                if (mobileMenu.classList.contains('open') &&
+                    !mobileMenu.contains(e.target) &&
+                    !hamburger.contains(e.target)) {
+                    closeMobileMenu();
+                }
+            });
+
+            // ============ Modal functions ============
+            function getScrollbarWidth() {
+                return window.innerWidth - document.documentElement.clientWidth;
+            }
+
+            function openModal(cottageId) {
+                const data = cottageData[cottageId];
+                if (!data) return;
+                currentCottageId = cottageId;
+                currentImageIndex = 0;
+
+                modalTitle.textContent = data.title;
+                modalDesc.textContent = data.desc;
+                updateModalImage();
+                renderModalDots();
+
+                const waText = encodeURIComponent(
+                    `Здравствуйте! Интересует «${data.title}». Подскажите цену и свободные даты.`);
+                modalWhatsapp.href = `https://wa.me/79184021249?text=${waText}`;
+                modalMax.href = `https://max.ru/u/f9LHodD0cOJKe0XVjeGMJPEZUjxC2jw2jee1zy8UYYXzUa7tY6pPUDA-Sak`;
+
+                const scrollbarW = getScrollbarWidth();
+                document.body.style.setProperty('--scrollbar-width', scrollbarW + 'px');
+                document.body.classList.add('modal-open');
+                modalOverlay.classList.add('active');
+                modalOverlay.setAttribute('aria-hidden', 'false');
+                modal.scrollTop = 0;
+
+                setTimeout(() => modalClose.focus(), 100);
+            }
+
+            function closeModal() {
+                document.body.classList.remove('modal-open');
+                modalOverlay.classList.remove('active');
+                modalOverlay.setAttribute('aria-hidden', 'true');
+                currentCottageId = null;
+                currentImageIndex = 0;
+            }
+
+            function updateModalImage() {
+                if (!currentCottageId) return;
+                const data = cottageData[currentCottageId];
+                modalMainImage.src = data.images[currentImageIndex];
+                modalMainImage.alt = `${data.title} — фото ${currentImageIndex + 1}`;
+                updateModalDots();
+                modalPrev.style.visibility = currentImageIndex === 0 ? 'hidden' : 'visible';
+                modalNext.style.visibility = currentImageIndex >= data.images.length - 1 ? 'hidden' : 'visible';
+            }
+
+            function renderModalDots() {
+                if (!currentCottageId) return;
+                const data = cottageData[currentCottageId];
+                modalDots.innerHTML = '';
+                data.images.forEach((_, i) => {
+                    const dot = document.createElement('span');
+                    if (i === currentImageIndex) dot.classList.add('active');
+                    dot.addEventListener('click', () => {
+                        currentImageIndex = i;
+                        updateModalImage();
+                    });
+                    dot.setAttribute('aria-label', `Фото ${i + 1}`);
+                    modalDots.appendChild(dot);
+                });
+            }
+
+            function updateModalDots() {
+                const dots = modalDots.querySelectorAll('span');
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentImageIndex);
+                });
+            }
+
+            modalPrev.addEventListener('click', () => {
+                if (!currentCottageId) return;
+                if (currentImageIndex > 0) {
+                    currentImageIndex--;
+                    updateModalImage();
+                }
+            });
+
+            modalNext.addEventListener('click', () => {
+                if (!currentCottageId) return;
+                const data = cottageData[currentCottageId];
+                if (currentImageIndex < data.images.length - 1) {
+                    currentImageIndex++;
+                    updateModalImage();
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (!currentCottageId) return;
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    if (currentImageIndex > 0) {
+                        currentImageIndex--;
+                        updateModalImage();
+                    }
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    const data = cottageData[currentCottageId];
+                    if (currentImageIndex < data.images.length - 1) {
+                        currentImageIndex++;
+                        updateModalImage();
+                    }
+                } else if (e.key === 'Escape') {
+                    e.preventDefault();
+                    closeModal();
+                }
+            });
+
+            modalClose.addEventListener('click', closeModal);
+            modalOverlay.addEventListener('click', function(e) {
+                if (e.target === modalOverlay) closeModal();
+            });
+
+            // ============ Cottage card click handlers ============
+            document.querySelectorAll('.cottage-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const cottageId = parseInt(this.getAttribute('data-cottage'));
+                    openModal(cottageId);
+                });
+                const btn = card.querySelector('.cottage-card__btn');
+                if (btn) {
+                    btn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        const cottageId = parseInt(card.getAttribute('data-cottage'));
+                        openModal(cottageId);
+                    });
+                }
+            });
+
+            // ============ Main Carousel ============
+            function updateCarousel() {
+                carouselTrack.style.transform = `translateX(-${carouselIndex * 100}%)`;
+                const dots = carouselDots.querySelectorAll('span');
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === carouselIndex);
+                });
+            }
+
+            function goToSlide(index) {
+                carouselIndex = index;
+                if (carouselIndex < 0) carouselIndex = totalCarouselSlides - 1;
+                if (carouselIndex >= totalCarouselSlides) carouselIndex = 0;
+                updateCarousel();
+                resetCarouselAutoplay();
+            }
+
+            function resetCarouselAutoplay() {
+                clearInterval(carouselInterval);
+                carouselInterval = setInterval(() => {
+                    carouselIndex = (carouselIndex + 1) % totalCarouselSlides;
+                    updateCarousel();
+                }, 5000);
+            }
+
+            for (let i = 0; i < totalCarouselSlides; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('carousel__dot');
+                if (i === 0) dot.classList.add('active');
+                dot.setAttribute('aria-label', `Слайд ${i + 1}`);
+                dot.addEventListener('click', () => goToSlide(i));
+                carouselDots.appendChild(dot);
+            }
+
+            carouselPrev.addEventListener('click', () => goToSlide(carouselIndex - 1));
+            carouselNext.addEventListener('click', () => goToSlide(carouselIndex + 1));
+
+            let touchStartX = 0;
+            let touchEndX = 0;
+            const carouselEl = document.getElementById('mainCarousel');
+            carouselEl.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+            carouselEl.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                const diff = touchStartX - touchEndX;
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) goToSlide(carouselIndex + 1);
+                    else goToSlide(carouselIndex - 1);
+                }
+            });
+
+            carouselInterval = setInterval(() => {
+                carouselIndex = (carouselIndex + 1) % totalCarouselSlides;
+                updateCarousel();
+            }, 5000);
+
+            carouselEl.addEventListener('mouseenter', () => clearInterval(carouselInterval));
+            carouselEl.addEventListener('mouseleave', resetCarouselAutoplay);
+            carouselEl.addEventListener('touchstart', () => clearInterval(carouselInterval), { passive: true });
+            carouselEl.addEventListener('touchend', resetCarouselAutoplay);
+
+            // ============ Scroll Animations (Intersection Observer) ============
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -60px 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+
+            // ============ Smooth scroll for anchor links ============
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        const headerHeight = parseInt(getComputedStyle(document.documentElement)
+                            .getPropertyValue('--header-height'));
+                        const top = target.getBoundingClientRect().top + window.pageYOffset -
+                            headerHeight - 10;
+                        window.scrollTo({ top, behavior: 'smooth' });
+                        closeMobileMenu();
+                    }
+                });
+            });
+
+            // ============ Initial carousel state ============
+            updateCarousel();
+
+            console.log('🏡 Домики 250 метров от моря — сайт готов к работе.');
+            console.log('📝 Все изображения теперь отображаются полностью (contain).');
+            console.log('🔗 Ссылка на Max обновлена на актуальную.');
+        })();
+    </script>
+
+    <!-- ============ Яндекс Карты (интерактивная карта) ============ -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        function initMap() {
+            var coords = [44.301118, 38.754848];
+            var map = new ymaps.Map('map', {
+                center: coords,
+                zoom: 16,
+                controls: ['zoomControl', 'typeSelector', 'fullscreenControl']
+            });
+            var placemark = new ymaps.Placemark(coords, {
+                balloonContentHeader: 'Коттеджи «Домики»',
+                balloonContentBody: 'с. Лермонтово, ул. Ленина, 33А',
+                balloonContentFooter: 'Краснодарский край'
+            }, {
+                preset: 'islands#redDotIconWithCaption',
+                draggable: false
+            });
+            map.geoObjects.add(placemark);
+            placemark.balloon.open();
+        }
+        ymaps.ready(initMap);
+    </script>
+</body>
+</html>
