@@ -477,11 +477,11 @@
         .cottage-card__img {
             width: 100%;
             height: 260px;
-            object-fit: contain; /* Изменено с cover на contain */
+            object-fit: contain;
             object-position: center;
             display: block;
             transition: transform 0.5s ease;
-            background-color: #fff; /* Поля будут белыми, как сама карточка */
+            background-color: #fff;
         }
         .cottage-card:hover .cottage-card__img {
             transform: scale(1.04);
@@ -521,7 +521,7 @@
             overflow: hidden;
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-md);
-            background-color: var(--sand-light); /* Фон карусели, чтобы поля сливались */
+            background-color: var(--sand-light);
         }
         .carousel__track {
             display: flex;
@@ -531,10 +531,10 @@
         .carousel__slide {
             min-width: 100%;
             height: 450px;
-            object-fit: contain; /* Изменено с cover на contain */
+            object-fit: contain;
             object-position: center;
             display: block;
-            background-color: var(--sand-light); /* Поля в цвет фона секции */
+            background-color: var(--sand-light);
         }
         .carousel__btn {
             position: absolute;
@@ -750,16 +750,16 @@
             height: 380px;
             overflow: hidden;
             border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-            background: #e8e8e8; /* Фон для полей */
+            background: #e8e8e8;
         }
         .modal__gallery img {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Изменено с cover на contain */
+            object-fit: contain;
             object-position: center;
             display: block;
             transition: opacity 0.35s ease;
-            background-color: #e8e8e8; /* Такой же фон, как у контейнера */
+            background-color: #e8e8e8;
         }
         .modal__gallery-nav {
             position: absolute;
@@ -856,6 +856,44 @@
             transform: translateY(0);
         }
 
+        /* ========== BOOKING FORM STYLES ========== */
+        .booking-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        .form-group {
+            margin-bottom: 24px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--dark);
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            border: 1px solid #ddd;
+            border-radius: var(--radius-sm);
+            transition: border-color var(--transition);
+            background: var(--sand-light);
+            outline: none;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--teal);
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+
         /* ========== RESPONSIVE ========== */
         @media (max-width: 1024px) {
             .advantages__grid {
@@ -932,6 +970,9 @@
             .footer__inner {
                 flex-direction: column;
                 text-align: center;
+            }
+            .booking-form {
+                padding: 28px 20px;
             }
         }
         @media (max-width: 480px) {
@@ -1048,9 +1089,8 @@
                 <a href="#cottages" class="btn btn--primary">
                     <i class="fa-solid fa-chevron-down"></i> Смотреть коттеджи
                 </a>
-                <a href="https://wa.me/79184021249?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%82%20%D0%BA%D0%BE%D1%82%D1%82%D0%B5%D0%B4%D0%B6%D0%B8%20%D0%B2%20%D0%9B%D0%B5%D1%80%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2%D0%BE."
-                target="_blank" rel="noopener" class="btn btn--whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i> Написать в WhatsApp
+                <a href="#booking" class="btn btn--whatsapp">
+                    <i class="fa-solid fa-calendar-check"></i> Забронировать домик
                 </a>
             </div>
         </div>
@@ -1134,7 +1174,7 @@
         </div>
     </section>
 
-    <!-- ==================== GALLERY ==================== -->
+    <!-- ==================== GALLERY (Территория и бассейн) ==================== -->
     <section class="gallery-section" id="gallery">
         <h2 class="section__title">Территория и бассейн</h2>
         <p class="section__subtitle">Посмотрите, как у нас красиво</p>
@@ -1150,6 +1190,55 @@
             <button class="carousel__btn carousel__btn--next" id="carouselNext" aria-label="Следующий слайд"><i class="fa-solid fa-chevron-right"></i></button>
             <div class="carousel__dots" id="carouselDots"></div>
         </div>
+    </section>
+
+    <!-- ==================== БАНЯ И ПРЕДБАННИК ==================== -->
+    <section class="gallery-section" id="bathhouse-gallery">
+        <h2 class="section__title">Баня и предбанник</h2>
+        <p class="section__subtitle">Уютный предбанник с большим столом и телевизором для комфортного отдыха. В предбаннике есть холодильник и самовар — всё необходимое для приятного времяпрепровождения после бани.</p>
+        <p style="text-align:center; color: var(--text-light); margin-bottom: 24px; max-width: 700px; margin-left: auto; margin-right: auto;">На территории есть баня, где можно расслабиться и отдохнуть после насыщенного дня у моря.</p>
+        <div class="carousel" id="bathCarousel" aria-label="Галерея бани и предбанника">
+            <div class="carousel__track" id="bathTrack">
+                <img class="carousel__slide" src="25.jpg" alt="Предбанник" loading="lazy" />
+                <img class="carousel__slide" src="26.jpg" alt="Баня" loading="lazy" />
+            </div>
+            <button class="carousel__btn carousel__btn--prev" id="bathPrev" aria-label="Предыдущий слайд"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="carousel__btn carousel__btn--next" id="bathNext" aria-label="Следующий слайд"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="carousel__dots" id="bathDots"></div>
+        </div>
+    </section>
+
+    <!-- ==================== ФОРМА БРОНИРОВАНИЯ ==================== -->
+    <section class="section" id="booking">
+        <h2 class="section__title">Забронировать домик</h2>
+        <p class="section__subtitle">Оставьте заявку, и мы свяжемся с вами для подтверждения</p>
+        <form id="bookingForm" class="booking-form" onsubmit="return false;">
+            <div class="form-group">
+                <label for="guestName">Имя</label>
+                <input type="text" id="guestName" name="name" required placeholder="Ваше имя">
+            </div>
+            <div class="form-group">
+                <label for="guestPhone">Номер телефона</label>
+                <input type="tel" id="guestPhone" name="phone" required placeholder="+7 9XX XXX-XX-XX">
+            </div>
+            <div class="form-group">
+                <label for="checkin">Дата заезда</label>
+                <input type="date" id="checkin" name="checkin" required>
+            </div>
+            <div class="form-group">
+                <label for="checkout">Дата выезда</label>
+                <input type="date" id="checkout" name="checkout" required>
+            </div>
+            <div class="form-group">
+                <label for="guestCount">Количество гостей</label>
+                <input type="number" id="guestCount" name="guests" min="1" required placeholder="Сколько гостей?">
+            </div>
+            <div class="form-group">
+                <label for="guestComment">Комментарий (необязательно)</label>
+                <textarea id="guestComment" name="comment" rows="3" placeholder="Ваши пожелания..."></textarea>
+            </div>
+            <button type="button" id="submitBooking" class="btn btn--primary" style="margin-top:10px; width:100%;">Отправить заявку</button>
+        </form>
     </section>
 
     <!-- ==================== CONTACTS ==================== -->
@@ -1218,11 +1307,8 @@
                 <h3 class="modal__title" id="modalTitle"></h3>
                 <p class="modal__desc" id="modalDesc"></p>
                 <div class="modal__btns">
-                    <a href="#" id="modalWhatsapp" target="_blank" rel="noopener" class="btn btn--whatsapp btn--small">
-                        <i class="fa-brands fa-whatsapp"></i> Написать в WhatsApp
-                    </a>
-                    <a href="#" id="modalMax" target="_blank" rel="noopener" class="btn btn--small" style="background:#6c5ce7;color:#fff;">
-                        <i class="fa-solid fa-comment-dots"></i> Написать в Max
+                    <a href="#booking" class="btn btn--primary btn--small" id="modalBookingBtn">
+                        <i class="fa-solid fa-calendar-check"></i> Забронировать коттедж
                     </a>
                 </div>
             </div>
@@ -1245,12 +1331,11 @@
             const modalDots = document.getElementById('modalDots');
             const modalPrev = document.getElementById('modalPrev');
             const modalNext = document.getElementById('modalNext');
-            const modalWhatsapp = document.getElementById('modalWhatsapp');
-            const modalMax = document.getElementById('modalMax');
             const carouselTrack = document.getElementById('carouselTrack');
             const carouselDots = document.getElementById('carouselDots');
             const carouselPrev = document.getElementById('carouselPrev');
             const carouselNext = document.getElementById('carouselNext');
+            const modalBookingBtn = document.getElementById('modalBookingBtn');
 
             // ============ Cottage data ============
             const cottageData = {
@@ -1306,7 +1391,7 @@
             let currentCottageId = null;
             let currentImageIndex = 0;
             let carouselIndex = 0;
-            const totalCarouselSlides = 5; // изменено с 6 на 5
+            const totalCarouselSlides = 5;
             let carouselInterval;
 
             // ============ Header scroll effect ============
@@ -1368,11 +1453,6 @@
                 modalDesc.textContent = data.desc;
                 updateModalImage();
                 renderModalDots();
-
-                const waText = encodeURIComponent(
-                    `Здравствуйте! Интересует «${data.title}». Подскажите цену и свободные даты.`);
-                modalWhatsapp.href = `https://wa.me/79184021249?text=${waText}`;
-                modalMax.href = `https://max.ru/u/f9LHodD0cOJKe0XVjeGMJPEZUjxC2jw2jee1zy8UYYXzUa7tY6pPUDA-Sak`;
 
                 const scrollbarW = getScrollbarWidth();
                 document.body.style.setProperty('--scrollbar-width', scrollbarW + 'px');
@@ -1484,6 +1564,21 @@
                 }
             });
 
+            // ============ Modal booking button ============
+            modalBookingBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                closeModal();
+                // Плавная прокрутка к форме бронирования после закрытия модального окна
+                setTimeout(() => {
+                    const target = document.getElementById('booking');
+                    if (target) {
+                        const headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height'));
+                        const top = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 10;
+                        window.scrollTo({ top, behavior: 'smooth' });
+                    }
+                }, 300); // Задержка соответствует анимации закрытия модального окна
+            });
+
             // ============ Main Carousel ============
             function updateCarousel() {
                 carouselTrack.style.transform = `translateX(-${carouselIndex * 100}%)`;
@@ -1584,13 +1679,109 @@
                 });
             });
 
-            // ============ Initial carousel state ============
             updateCarousel();
-
-            console.log('🏡 Домики 250 метров от моря — сайт готов к работе.');
-            console.log('📝 Все изображения теперь отображаются полностью (contain).');
-            console.log('🔗 Ссылка на Max обновлена на актуальную.');
         })();
+    </script>
+
+    <!-- ==================== BATHHOUSE CAROUSEL SCRIPT ==================== -->
+    <script>
+        (function() {
+            const bathTrack = document.getElementById('bathTrack');
+            const bathDots = document.getElementById('bathDots');
+            const bathPrev = document.getElementById('bathPrev');
+            const bathNext = document.getElementById('bathNext');
+            const totalBathSlides = 2;
+            let bathIndex = 0;
+            let bathInterval;
+
+            function updateBathCarousel() {
+                bathTrack.style.transform = `translateX(-${bathIndex * 100}%)`;
+                const dots = bathDots.querySelectorAll('span');
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === bathIndex);
+                });
+            }
+
+            function goToBathSlide(index) {
+                bathIndex = index;
+                if (bathIndex < 0) bathIndex = totalBathSlides - 1;
+                if (bathIndex >= totalBathSlides) bathIndex = 0;
+                updateBathCarousel();
+                resetBathAutoplay();
+            }
+
+            function resetBathAutoplay() {
+                clearInterval(bathInterval);
+                bathInterval = setInterval(() => {
+                    bathIndex = (bathIndex + 1) % totalBathSlides;
+                    updateBathCarousel();
+                }, 5000);
+            }
+
+            // Создаем точки
+            for (let i = 0; i < totalBathSlides; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('carousel__dot');
+                if (i === 0) dot.classList.add('active');
+                dot.setAttribute('aria-label', `Слайд ${i + 1}`);
+                dot.addEventListener('click', () => goToBathSlide(i));
+                bathDots.appendChild(dot);
+            }
+
+            bathPrev.addEventListener('click', () => goToBathSlide(bathIndex - 1));
+            bathNext.addEventListener('click', () => goToBathSlide(bathIndex + 1));
+
+            // Сенсорное управление
+            let touchStartX = 0;
+            const bathCarouselEl = document.getElementById('bathCarousel');
+            bathCarouselEl.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+            bathCarouselEl.addEventListener('touchend', (e) => {
+                const diff = touchStartX - e.changedTouches[0].screenX;
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) goToBathSlide(bathIndex + 1);
+                    else goToBathSlide(bathIndex - 1);
+                }
+            });
+
+            // Автопрокрутка
+            bathInterval = setInterval(() => {
+                bathIndex = (bathIndex + 1) % totalBathSlides;
+                updateBathCarousel();
+            }, 5000);
+
+            bathCarouselEl.addEventListener('mouseenter', () => clearInterval(bathInterval));
+            bathCarouselEl.addEventListener('mouseleave', resetBathAutoplay);
+            bathCarouselEl.addEventListener('touchstart', () => clearInterval(bathInterval), { passive: true });
+            bathCarouselEl.addEventListener('touchend', resetBathAutoplay);
+        })();
+    </script>
+
+    <!-- ==================== BOOKING FORM SCRIPT ==================== -->
+    <script>
+        document.getElementById('submitBooking').addEventListener('click', function() {
+            const name = document.getElementById('guestName').value.trim();
+            const phone = document.getElementById('guestPhone').value.trim();
+            const checkin = document.getElementById('checkin').value;
+            const checkout = document.getElementById('checkout').value;
+            const guests = document.getElementById('guestCount').value.trim();
+            const comment = document.getElementById('guestComment').value.trim();
+
+            if (!name || !phone || !checkin || !checkout || !guests) {
+                alert('Пожалуйста, заполните все обязательные поля.');
+                return;
+            }
+
+            let message = `Здравствуйте! Хочу забронировать домик.\n\nИмя: ${name}\nТелефон: ${phone}\nДата заезда: ${checkin}\nДата выезда: ${checkout}\nКоличество гостей: ${guests}`;
+            if (comment) {
+                message += `\nКомментарий: ${comment}`;
+            }
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/79184021249?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        });
     </script>
 
     <!-- ============ Яндекс Карты (интерактивная карта) ============ -->
