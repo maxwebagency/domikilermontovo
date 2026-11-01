@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+        <loc>https://maxwebagency.github.io/domikilermontovo/</loc>
+        <image:image>
+            <image:loc>https://maxwebagency.github.io/domikilermontovo/1.jpg</image:loc>
+            <image:title>Домики и коттеджи в Лермонтово у моря</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://maxwebagency.github.io/domikilermontovo/2.jpg</image:loc>
+            <image:title>Двухэтажный коттедж на 8 спальных мест</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://maxwebagency.github.io/domikilermontovo/8.jpg</image:loc>
+            <image:title>Этаж под ключ на 7 спальных мест</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://maxwebagency.github.io/domikilermontovo/13.jpg</image:loc>
+            <image:title>Дом на 6 спальных мест</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://maxwebagency.github.io/domikilermontovo/20.jpg</image:loc>
+            <image:title>Подогреваемый бассейн на территории</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://maxwebagency.github.io/domikilermontovo/25.jpg</image:loc>
+            <image:title>Баня и предбанник</image:title>
+        </image:image>
+    </url>
+</urlset>
